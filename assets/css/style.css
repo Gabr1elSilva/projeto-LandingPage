@@ -1,0 +1,153 @@
+/* 
+Branco: #F2F2F2
+Preto: #0D0D0D
+Vermelho: #8C0303
+Cinza: #727365  
+Salmao: #F2958D
+*/
+
+:root {
+    --white-color: #F2F2F2;
+    --red-color: #8C0303;
+    --black-color: #0D0D0D;
+    --gray-color: #727365;
+    --salmon-color: #F2958D;
+    --gap: 3rem;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+/*  
+font-family: "Open Sans", sans-serif;
+font-family: "Montserrat", sans-serif;
+ */
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+    font-size: 6rem;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 5.5rem;
+}
+
+h3 {
+    font-size: 5rem;
+}
+
+h4 {
+    font-size: 4.5rem;
+}
+
+h5 {
+    font-size: 4rem;
+}
+
+h6 {
+    font-size: 3.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-bg {
+    background: url('../img/main-bg.svg');
+    background-size: cover;
+    background-position: center center;
+    color: var(--white-color);
+    padding: var(--gap);
+}
+
+.white-bg {
+    background: var(--white-color);
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section {
+    min-height: 100vh;
+}
+
+.menu {
+    background-color: var(--white-color);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    border-bottom: 1px solid var(--gray-color);
+}
+
+.menu-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.menu h1 {
+    font-size: 2.3rem;
+    color: var(--red-color);
+}
+
+.menu h1 a{
+    font-size: 2.3rem;
+    color: inherit;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+
+}
+
+.menu ul li a{
+    position: relative;
+    display: block;
+    padding: 2rem;
+    font-size: 1.8rem;
+    font-family: "Montserrat", sans-serif;
+    color: var(--red-color);
+}
+
+.menu ul li a::after{
+    content: '';
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    width: 0px;
+    height: 0.2rem;
+    background: var(--salmon-color);
+    transition: all 300ms ease-in-out;
+}
+
+.menu ul li a:hover::after{
+    width: 50%;
+    left: 25%;
+}
