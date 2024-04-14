@@ -12,6 +12,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 html {
@@ -19,7 +20,7 @@ html {
     scroll-behavior: smooth;
 }
 
-/*  
+/*
 font-family: "Open Sans", sans-serif;
 font-family: "Montserrat", sans-serif;
  */
@@ -44,7 +45,7 @@ h1 {
     text-transform: uppercase;
 }
 
-h2{
+h2 {
     font-size: 6rem;
     margin-bottom: 5rem;
     text-transform: uppercase;
@@ -73,6 +74,32 @@ a {
 
 p {
     margin-bottom: 3rem;
+}
+
+table {
+    min-width: 360px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table caption {
+    font-style: italic;
+    font-size: 1.6rem;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+table td,
+table th {
+    white-space: wrap;
+    padding: 1rem;
+    text-align: left;
+    border: 0.1rem solid var(--harbour-color);
+}
+
+table th {
+    background-color: var(--harbour-color);
+    color: var(--persianblue-color);
 }
 
 .main-bg {
@@ -125,7 +152,7 @@ p {
     color: var(--persianblue-color);
 }
 
-.menu h1 a{
+.menu h1 a {
     font-size: 2.3rem;
     color: inherit;
 }
@@ -136,7 +163,7 @@ p {
 
 }
 
-.menu ul li a{
+.menu ul li a {
     position: relative;
     display: block;
     padding: 2rem;
@@ -145,7 +172,7 @@ p {
     color: var(--persianblue-color);
 }
 
-.menu ul li a::after{
+.menu ul li a::after {
     content: '';
     position: absolute;
     bottom: 1rem;
@@ -156,21 +183,22 @@ p {
     transition: all 300ms ease-in-out;
 }
 
-.menu ul li a:hover::after{
+.menu ul li a:hover::after {
     width: 50%;
     left: 25%;
 }
 
 .aboutUs-content {
     position: relative;
-    top: -8rem;
+    /* top: -8rem; */
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: var(--gap);
     min-height: 100vh;
 }
 
-.aboutUs-text-content, .aboutUs-img {
+.aboutUs-text-content,
+.aboutUs-img {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -184,14 +212,14 @@ p {
 .ourServices-content {
     max-width: 64rem;
     display: flex;
-    flex-flow: column wrap;
+    flex-direction: column;
+    flex-wrap: nowrap;
     justify-content: center;
     min-height: 100vh;
     text-align: center;
 }
 
 .grid-one-content {
-    height: 100vh;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -247,9 +275,131 @@ p {
 }
 
 .grid-two-content {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    min-height: 100vh;
+}
+
+.responsive-table {
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+.contact-form {
+    grid-column: span 2;
+}
+
+.contact-form .form-grid {
+    border: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--gap);
+}
+
+.form-grid legend {
+    font-style: italic;
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+}
+
+.form-group {
+    flex: 1 1 400px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+    border: none;
+    background-color: var(--white-color);
+    padding: 1.5rem 2rem;
+    width: 100%;
+    font-size: 3rem;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    box-shadow: 0px 0px 10px 2px var(--persianblue-color);
+}
+
+.form-group button {
+    border: 0.5rem solid var(--white-color);
+    background: none;
+    color: var(--persianblue-color);
+    padding: 1.5rem 2rem;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.form-group button:hover {
+    background: var(--white-color);
+    color: var(--harbour-color);
+}
+
+.form-group ::placeholder {
+    color: var(--persianblue-color);
+}
+
+.footer {
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.footer a {
+    color: var(--persianblue-color);
+    margin: 0px;
+}
+
+.footer p {
+    margin: 0px;
+    padding: 3rem;
+}
+
+body .full-width {
+    width: 100%;
+    flex: 1 1 100%;
+}
+
+@media (max-width:800px) {
+
+    .home-content,
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-img {
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .gallery-img img {
+        width: 100%;
+    }
+
+    .grid-one-content {
+        display: block;
+    }
+
+    .menu {
+        bottom: 0rem;
+        text-align: center;
+    }
+
+    .menu-content,
+    .menu-content ul {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .menu-content {
+        height: 100vh;
+    }
 }

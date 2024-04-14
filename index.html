@@ -14,6 +14,10 @@
 </head>
 
 <body>
+
+    <input type="checkbox" aria-label="Close menu" role="button" name="close-menu" id="close-menu">
+    <label for="close-menu" title="close meni"></label>
+
     <header class="menu white-bg">
         <section class="main-content menu-content">
             <h1><a href="#home">LOGO</a></h1>
@@ -23,15 +27,15 @@
                     <li><a href="#ourMission">Our Mission</a></li>
                     <li><a href="#grid-one">Our Services</a></li>
                     <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#gallery">Work</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </section>
     </header>
     <main>
-        <div id="home" class="menu-spacing"></div>
-        <section class="aboutUs main-bg section">
+        <div class="menu-spacing"></div>
+        <section id="home" class="aboutUs main-bg section">
             <div class="main-content aboutUs-content">
                 <div class="aboutUs-text-content">
                     <h2>About Us</h2>
@@ -93,7 +97,11 @@
         <section id="gallery" class="grid-one white-bg section">
             <div class="main-content grid-two-content">
                 <h2 class="grid-main-heading">Explore Our Work</h2>
-                <p>Explore our portfolio to see the innovative projects we've created for our clients. From stylish web designs to advanced mobile apps, our gallery displays the diversity and excellence of our work. Get inspired by the creativity and skill behind each project as you browse through our portfolio. Whether you're looking for ideas for your next project or just curious about what we can do, our gallery gives you a glimpse into the world of CodeWave Solutions.</p>
+                <p>Explore our portfolio to see the innovative projects we've created for our clients. From stylish web
+                    designs to advanced mobile apps, our gallery displays the diversity and excellence of our work. Get
+                    inspired by the creativity and skill behind each project as you browse through our portfolio.
+                    Whether you're looking for ideas for your next project or just curious about what we can do, our
+                    gallery gives you a glimpse into the world of CodeWave Solutions.</p>
                 <div class="grid">
                     <div class="gallery-img">
                         <img src="https://source.unsplash.com/random/360x360?r=1" alt="Random image from unsplash">
@@ -116,9 +124,102 @@
                 </div>
             </div>
         </section>
-    </main>
-    <footer>
 
+        <section id="pricing" class="main-bg section">
+            <div class="main-content ourServices-content">
+                <h2>Our Pricing Plans</h2>
+                <p> Choose the pricing plan that best fits your business needs. Whether you're a startup looking to
+                    build a custom application or an established enterprise in need of web development services, we have
+                    flexible pricing options to suit your budget and requirements.</p>
+
+                <div class="responsive-table">
+                    <table>
+                        <caption>Pricing Plans</caption>
+                        <thead>
+                            <tr>
+                                <th>Services</th>
+                                <th>Basic Package</th>
+                                <th>Standard Package</th>
+                                <th>Premium Package</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Custom Application Development</td>
+                                <td>$5,000</td>
+                                <td>$10,000</td>
+                                <td>Custom Quote</td>
+                            </tr>
+                            <tr>
+                                <td>Web Development</td>
+                                <td>$3,000</td>
+                                <td>$8,000</td>
+                                <td>Custom Quote</td>
+                            </tr>
+                            <tr>
+                                <td>Mobile App Development</td>
+                                <td>$7,000</td>
+                                <td>$15,000</td>
+                                <td>Custom Quote</td>
+                            </tr>
+                            <tr>
+                                <td>Software Consulting</td>
+                                <td>$100/hr</td>
+                                <td>$150/hr</td>
+                                <td>Custom Quote</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="aboutUs white-bg section">
+            <div class="main-content aboutUs-content">
+                <div class="aboutUs-text-content">
+                    <h2>Contact Us</h2>
+                    <p>Include a contact form or details such as address, phone number, and email so potential clients
+                        can easily reach out to discuss their software development needs.</p>
+                </div>
+                <div class="aboutUs-img">
+                    <img src="assets/img/software.svg" alt="Logo atividade físicas(Escrever melhor)">
+                </div>
+
+                <div class="contact-form">
+                    <fieldset class="form-grid">
+                        <legend>Contact Us</legend>
+
+                        <div class="form-group">
+                            <label for="first-name">First Name:</label>
+                            <input type="text" name="first-name" id="first-name" placeholder="Your name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="last-name">Last Name:</label>
+                            <input type="text" name="last-name" id="last-name" placeholder="Your last name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-mail:</label>
+                            <input type="email" name="email" id="email" placeholder="Your email" required>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="message">Message:</label>
+                            <textarea name="message" id="message" cols="30" rows="10"
+                                placeholder="Your message"></textarea>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <button type="submit">Send message</button>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer" class="footer ">
+        <p>Feito por <a href="https://github.com/Gabr1elSilva" rel="nofollow" target="_blank">Gabriel Silva</a></p>
     </footer>
 </body>
 
